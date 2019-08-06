@@ -5,10 +5,7 @@ import hexcolors from "../images/projects/hexcolors.png";
 import bmiCalculator from "../images/projects/bmi-calculator.png";
 import countriesList from "../images/projects/countrieslist.png";
 import SocialMediaIcons from "./SocialMediaIcons";
-const styles = {
-  background: `url(${trees}) no-repeat center center/cover`,
-  color: "fff"
-};
+
 const stylesFinlary = {
   background: `url(${finlary}) no-repeat center center/cover`
 };
@@ -22,6 +19,17 @@ const stylesBMI = {
   background: `url(${bmiCalculator}) no-repeat center center/cover`
 };
 export default function Projects() {
+  const isMobile = window.innerWidth <= 415;
+  let styles;
+  if (isMobile) {
+    styles = {
+      background: "#7f8aaa"
+    };
+  } else {
+    styles = {
+      background: `url(${trees}) no-repeat center center/cover`
+    };
+  }
   return (
     <section id="projects" style={styles}>
       <h1>Projects</h1>

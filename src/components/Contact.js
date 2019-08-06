@@ -2,14 +2,23 @@ import React from "react";
 import purpleLeaves from "../images/purple-leaves.jpg";
 import SocialMediaIcons from "./SocialMediaIcons";
 import Footer from "./Footer";
-const styles = {
-  background: `url(${purpleLeaves}) no-repeat center center/cover`
-};
 export default function Contact() {
+  let styles;
+  const isMobile = window.innerWidth <= 415;
+  if (isMobile) {
+    styles = {
+      background: "#7f8aaa"
+    };
+  } else {
+    styles = {
+      background: `url(${purpleLeaves}) no-repeat center center/cover`
+    };
+  }
+
   return (
     <section id="contact" style={styles}>
       <h1>Contact me</h1>
-      <h2>johanna.rousi@gmail.com</h2>
+      <a href="mailto:johannarousi@gmail.com">johanna.rousi@gmail.com</a>
       <form className="form-labels">
         <label htmlFor="email">Email:</label>
         <input

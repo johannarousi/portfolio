@@ -2,10 +2,19 @@ import React from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import purpleClouds from "../images/darker-clouds.jpg";
 import profilePicture from "../images/profile-picture-small.jpg";
-const styles = {
-  background: `url(${purpleClouds}) no-repeat center center/cover`
-};
 export default function Home() {
+  let styles;
+  const isMobile = window.innerWidth <= 415;
+  if (isMobile) {
+    styles = {
+      background: "#7f8aaa"
+    };
+  } else {
+    styles = {
+      background: `url(${purpleClouds}) no-repeat center center/cover`
+    };
+  }
+
   return (
     <section id="home" style={styles}>
       <div className="dark">

@@ -263,6 +263,10 @@ table {
 }
 
 /* CONTACT */
+#contact a {
+  font-size: 25px;
+  color: #fff;
+}
 .form-labels {
   display: flex;
   flex-direction: column;
@@ -497,6 +501,9 @@ footer {
 }
 
 @media (max-width: 415px) {
+  .dark {
+    background: #7f8aaa;
+  }
   section h1 {
     font-size: 35px;
     font-family: "Source Code Pro", monospace;
