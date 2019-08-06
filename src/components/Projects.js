@@ -23,7 +23,7 @@ export default function Projects() {
   let styles;
   if (isMobile) {
     styles = {
-      background: "#7f8aaa"
+      background: "transparent"
     };
   } else {
     styles = {

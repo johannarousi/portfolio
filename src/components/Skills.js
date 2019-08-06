@@ -1,13 +1,14 @@
 import React from "react";
 import kanervat from "../images/kanervat.jpg";
 import SocialMediaIcons from "./SocialMediaIcons";
+import purpleClouds from "../images/darker-clouds.jpg";
 
 export default function Skills() {
   const isMobile = window.innerWidth <= 415;
   let styles;
   if (isMobile) {
     styles = {
-      background: "#7f8aaa"
+      background: `url(${purpleClouds}) no-repeat center center/cover`
     };
   } else {
     styles = {

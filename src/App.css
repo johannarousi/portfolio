@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #000;
+  background: linear-gradient(to right, #7f8aaa, #c7b1c2);
   color: white;
   font-family: "Source Code Pro", monospace;
   /* font-family: Arial, Helvetica, sans-serif; */
