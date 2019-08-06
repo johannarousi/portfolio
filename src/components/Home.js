@@ -7,7 +7,8 @@ export default function Home() {
   const isMobile = window.innerWidth <= 415;
   if (isMobile) {
     styles = {
-      background: "#7f8aaa"
+      // background: "#7f8aaa"
+      background: "transparent"
     };
   } else {
     styles = {

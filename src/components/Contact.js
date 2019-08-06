@@ -7,7 +7,8 @@ export default function Contact() {
   const isMobile = window.innerWidth <= 415;
   if (isMobile) {
     styles = {
-      background: "#7f8aaa"
+      // background: "#7f8aaa"
+      background: "transparent"
     };
   } else {
     styles = {
@@ -19,7 +20,7 @@ export default function Contact() {
     <section id="contact" style={styles}>
       <h1>Contact me</h1>
       <a href="mailto:johannarousi@gmail.com">johanna.rousi@gmail.com</a>
-      <form className="form-labels">
+      {/* <form className="form-labels">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -33,7 +34,7 @@ export default function Contact() {
         <textarea id="message" name="message" rows="12" />
         <br />
         <input id="submit" type="submit" value="Submit" />
-      </form>
+      </form> */}
       <SocialMediaIcons />
       <Footer />
     </section>
