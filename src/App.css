@@ -417,7 +417,6 @@ footer p {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    /* border: solid 2px blue; */
     overflow: hidden;
   }
   .projects-div div {
@@ -535,6 +534,8 @@ footer p {
 @media (max-width: 415px) {
   body {
     scroll-snap-type: none;
+    scroll-snap-points-y: none;
+    scroll-snap-type-y: none;
   }
 
   section h1 {
@@ -579,5 +580,13 @@ footer p {
   }
   input {
     padding: 8px;
+  }
+}
+@media (max-width: 360px) {
+  .img-container {
+    margin-top: 10px;
+  }
+  .navbar {
+    height: 50px;
   }
 }
