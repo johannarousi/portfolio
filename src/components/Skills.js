@@ -21,7 +21,7 @@ export default function Skills() {
         <div className="skills-and-education">
           <div className="skills-language-div">
             <div className="skills-div">
-              <h2>Skills</h2>
+              <h2>Technologies</h2>
               <div className="html-div">HTML</div>
               <div className="css-div">CSS</div>
               <div className="javascript-div">JavaScript</div>

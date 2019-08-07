@@ -3,15 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: linear-gradient(to right, #7f8aaa, #c7b1c2);
+  /* background: linear-gradient(to right, #7f8aaa, #c7b1c2); */
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
   font-family: "Source Code Pro", monospace;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* line-height: 1.6; */
-  /* height: 100vh; */
-  /* overflow: hidden; */
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
@@ -91,8 +91,6 @@ section p {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  margin-top: 2rem;
-  /* border: solid 2px blue; */
   overflow: hidden;
 }
 
@@ -101,6 +99,7 @@ section p {
 }
 
 .dark {
+  /* background: rgba(77, 65, 182, 0.2); */
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 100%;
@@ -110,7 +109,16 @@ section p {
   justify-content: center;
   text-align: center;
 }
-
+.light-skills {
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .social-media-icons {
   /* border: 2px solid #fff; */
   position: fixed;
@@ -306,8 +314,8 @@ input:hover {
 }
 
 #submit {
-  background-color: #878688;
-  border: 1px solid #878688;
+  background-color: #806f97;
+  border: 1px solid #806f97;
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Verdana, sans-serif;
@@ -316,22 +324,23 @@ input:hover {
   width: 90px;
 }
 #submit:hover {
-  background-color: #630d5e;
-  border: 1px solid#630d5e;
+  background-color: #c6b0f8;
+  border: 1px solid#c6b0f8;
   color: white;
 }
 
 footer {
   display: flex;
+  justify-content: center;
   align-items: center;
   background: #630d5e;
   width: 100%;
   height: 50px;
   position: absolute;
+  left: 0;
   bottom: 0;
-  justify-content: center;
 }
-.footer p {
+footer p {
   font-size: 12px;
 }
 @media only screen and (max-width: 1245px) {
@@ -372,6 +381,9 @@ footer {
   section p {
     font-size: 1.3rem;
   }
+  footer p {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 980px) {
@@ -396,6 +408,9 @@ footer {
     margin-right: 5rem;
     margin-top: 1.9rem;
     margin-bottom: 1.9rem;
+  }
+  footer p {
+    margin: 0;
   }
 
   .img-container {
@@ -428,7 +443,7 @@ footer {
     background: transparent;
   }
   .social-media-icons i:hover {
-    color: rgb(218, 207, 245);
+    color: #dacff5;
   }
 
   .social-media-icons a {
@@ -456,13 +471,14 @@ footer {
     height: 4px;
     background-color: #fff;
     margin: 5px;
+    transition: 0.4s;
   }
 
   .navbar > .navbar-links {
     position: absolute;
     display: block;
     width: 100%;
-    background: rgb(218, 207, 245);
+    background: #7f8aaa;
     height: 0;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -471,12 +487,12 @@ footer {
   }
 
   .navbar > .navbar-links > a {
-    color: #80469b;
+    color: #fff;
     display: block;
     width: 100%;
   }
   .navbar > .navbar-links > a:hover {
-    color: #fff;
+    color: #dacff5;
   }
   .navbar > #nav-check:not(:checked) + .navbar-links {
     height: 0;
@@ -486,6 +502,28 @@ footer {
     text-align: center;
     height: calc(100vh - 50px);
     overflow-y: auto;
+  }
+  .change .span1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .change .span2 {
+    opacity: 0;
+  }
+  .change .span3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  .changeback .span1 {
+    -webkit-transform: rotate(45deg) translate(5px, -5px);
+    transform: rotate(45deg) translate(5px, -5px);
+  }
+  .changeback .span2 {
+    opacity: unset;
+  }
+  .changeback .span3 {
+    -webkit-transform: rotate(-45deg) translate(8px, 8px);
+    transform: rotate(-45deg) translate(8px, 8px);
   }
   /* END OF HAMBURGER MEDIA QUERY */
 }
@@ -505,15 +543,19 @@ footer {
 }
 
 @media (max-width: 415px) {
-  .dark {
-    background: transparent;
+  body {
+    scroll-snap-type: none;
   }
+
   section h1 {
     font-size: 35px;
     font-family: "Source Code Pro", monospace;
   }
   section p {
     margin: 0 30px;
+  }
+  .img-container {
+    margin-top: 2rem;
   }
   .form-labels {
     margin-top: 0.5rem;
@@ -540,6 +582,10 @@ footer {
   }
   footer {
     background: #806f97;
+  }
+  footer p {
+    font-size: 12px;
+    color: #fff;
   }
   input {
     padding: 8px;

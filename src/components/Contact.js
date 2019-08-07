@@ -2,6 +2,7 @@ import React from "react";
 import purpleLeaves from "../images/purple-leaves.jpg";
 import SocialMediaIcons from "./SocialMediaIcons";
 import Footer from "./Footer";
+
 export default function Contact() {
   let styles;
   const isMobile = window.innerWidth <= 415;
@@ -18,9 +19,10 @@ export default function Contact() {
 
   return (
     <section id="contact" style={styles}>
-      <h1>Contact me</h1>
-      <a href="mailto:johannarousi@gmail.com">johanna.rousi@gmail.com</a>
-      {/* <form className="form-labels">
+      <div className="dark">
+        <h1>Contact me</h1>
+        <a href="mailto:johannarousi@gmail.com">johanna.rousi@gmail.com</a>
+        {/* <form className="form-labels">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -35,8 +37,9 @@ export default function Contact() {
         <br />
         <input id="submit" type="submit" value="Submit" />
       </form> */}
-      <SocialMediaIcons />
-      <Footer />
+        <SocialMediaIcons />
+        <Footer />
+      </div>
     </section>
   );
 }

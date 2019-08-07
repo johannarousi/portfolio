@@ -12,19 +12,26 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-const styles = {
-  background: `url(${purpleClouds}) no-repeat center center/cover`
-};
-const stylesDark = {
-  background: "rgba(0,0,0,0.0)"
-};
-
 // library.add(faCoffee, faCheckSquare, faInstagram);
 
 function App() {
+  let styles;
+  const isMobile = window.innerWidth <= 415;
+  if (isMobile) {
+    styles = {
+      // background: "#7f8aaa"
+      background: `url(${purpleClouds}) no-repeat center center/cover`
+    };
+  } else {
+    styles = {
+      background: `url(${purpleClouds}) no-repeat center center/cover`,
+      backgroundAttachment: "fixed"
+    };
+  }
+
   return (
-    <div className="container" style={styles}>
-      <div style={stylesDark}>
+    <>
+      <div className="app-container" style={styles}>
         {/* <FontAwesomeIcon icon="check-square" />
       Favorite Drink:{" "}
       <FontAwesomeIcon icon="instagram" color="white" size="4x" /> */}
@@ -34,7 +41,7 @@ function App() {
         <Projects />
         <Contact />
       </div>
-    </div>
+    </>
   );
 }
 
