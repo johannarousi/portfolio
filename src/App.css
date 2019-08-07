@@ -514,17 +514,7 @@ footer p {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
-  .changeback .span1 {
-    -webkit-transform: rotate(45deg) translate(5px, -5px);
-    transform: rotate(45deg) translate(5px, -5px);
-  }
-  .changeback .span2 {
-    opacity: unset;
-  }
-  .changeback .span3 {
-    -webkit-transform: rotate(-45deg) translate(8px, 8px);
-    transform: rotate(-45deg) translate(8px, 8px);
-  }
+
   /* END OF HAMBURGER MEDIA QUERY */
 }
 @media (max-width: 680px) {
