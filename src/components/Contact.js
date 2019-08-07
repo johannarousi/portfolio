@@ -1,5 +1,5 @@
 import React from "react";
-import purpleLeaves from "../images/purple-leaves.jpg";
+import purpleLeaves from "../images/purple-leaves-small.jpg";
 import SocialMediaIcons from "./SocialMediaIcons";
 import Footer from "./Footer";
 

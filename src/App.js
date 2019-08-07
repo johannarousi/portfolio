@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import purpleClouds from "./images/darker-clouds.jpg";
+import purpleClouds from "./images/darker-clouds-small.jpg";
 
 // import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCoffee, faCheckSquare } from "@fortawesome/free-solid-svg-icons";

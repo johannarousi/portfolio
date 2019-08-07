@@ -13,8 +13,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Source Code Pro", monospace;
   scroll-snap-type: mandatory;
+  -webkit-scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
+  -webkit-scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+  -webkit-scroll-snap-type: y mandatory;
 }
 
 a {
@@ -534,8 +537,11 @@ footer p {
 @media (max-width: 415px) {
   body {
     scroll-snap-type: none;
+    -webkit-scroll-snap-type: none;
     scroll-snap-points-y: none;
+    -webkit-scroll-snap-points-y: none;
     scroll-snap-type-y: none;
+    -webkit-scroll-snap-type-y: none;
   }
 
   section h1 {

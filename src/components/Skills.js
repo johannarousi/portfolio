@@ -1,5 +1,5 @@
 import React from "react";
-import kanervat from "../images/kanervat.jpg";
+import kanervat from "../images/kanervat-small.jpg";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 export default function Skills() {
