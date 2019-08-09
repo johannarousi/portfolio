@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -24,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-/*   HAMBURGERNAV   */
+/*   NAV   */
 .navbar {
   position: fixed;
   display: flex;
@@ -62,8 +63,6 @@ a {
 .navbar > #nav-check {
   display: none;
 }
-
-/* END OF HAMBURGERNAV*/
 
 section {
   position: relative;
@@ -123,7 +122,6 @@ section p {
   text-align: center;
 }
 .social-media-icons {
-  /* border: 2px solid #fff; */
   position: fixed;
   left: 0;
   z-index: 1;
@@ -167,9 +165,6 @@ section p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-/* .skills-language-div div {
-} */
 
 .skills-and-education h2 {
   color: #fff;
@@ -428,7 +423,6 @@ footer p {
 
 @media only screen and (max-width: 710px) {
   .social-media-icons {
-    /* border: 2px solid #fff; */
     position: fixed;
     top: 0;
     z-index: 1;

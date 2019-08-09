@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "./App.css";
 import purpleClouds from "./images/darker-clouds-small.jpg";
 
@@ -30,18 +31,27 @@ function App() {
   }
 
   return (
-    <>
-      <div className="app-container" style={styles}>
-        {/* <FontAwesomeIcon icon="check-square" />
+    <div className="app-container" style={styles}>
+      <Helmet>
+        <title>Johanna Rousi</title>
+        <meta
+          name="description"
+          content="My name is Johanna Rousi an I'm a finnish web developer living in Helsinki. Welcome to my Portfolio."
+        />
+        <meta
+          name="keywords"
+          content="johanna rousi, web development, developer, ohjelmistokehitys, ohjelmistokehittäjä, koodaaja, junior developer, frontend, backend, HTML, CSS, javascript, ICT, React, MongoDB"
+        />
+      </Helmet>
+      {/* <FontAwesomeIcon icon="check-square" />
       Favorite Drink:{" "}
       <FontAwesomeIcon icon="instagram" color="white" size="4x" /> */}
-        <Navbar />
-        <Home />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
-    </>
+      <Navbar />
+      <Home />
+      <Skills />
+      <Projects />
+      <Contact />
+    </div>
   );
 }
 
