@@ -256,10 +256,8 @@ table {
 /* PROJECTS */
 .projects-div {
   display: flex;
-  /* flex-wrap: wrap; */
   overflow-x: auto;
   width: 80%;
-  /* justify-content: center; */
 }
 
 .projects-div div {

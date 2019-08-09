@@ -1,6 +1,7 @@
 import React from "react";
 // import purpleClouds from "../images/purple-clouds.jpg";
 import finlary from "../images/projects/finlary.png";
+import phonebook from "../images/projects/phonebook.png";
 import hexcolors from "../images/projects/hexcolors.png";
 import bmiCalculator from "../images/projects/bmi-calculator.png";
 import countriesList from "../images/projects/countrieslist.png";
@@ -8,6 +9,9 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 const stylesFinlary = {
   background: `url(${finlary}) no-repeat center center/cover`
+};
+const stylesPhonebook = {
+  background: `url(${phonebook}) no-repeat center center/cover`
 };
 const stylesHexcolors = {
   background: `url(${hexcolors}) no-repeat center center/cover`
@@ -43,6 +47,13 @@ export default function Projects() {
             <div style={stylesFinlary}>
               {/* <img src={finlary} alt="finlary-app" /> */}
             </div>
+          </a>
+          <a
+            href="https://tranquil-plateau-40368.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div style={stylesPhonebook} />
           </a>
 
           <a
