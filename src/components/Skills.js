@@ -26,6 +26,8 @@ export default function Skills() {
               <div className="css-div">CSS</div>
               <div className="javascript-div">JavaScript</div>
               <div className="react-div">React</div>
+              <div className="gatsby-div">Gatsby</div>
+              <div className="contentful-div">Contentful</div>
               <div className="redux-div">Redux</div>
               <div className="nodejs-div">Node.js</div>
               <div className="mongodb-div">MongoDB</div>

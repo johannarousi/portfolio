@@ -6,13 +6,13 @@ export default function Navbar() {
   const onClick = () => {
     setClickState(!clickState);
   };
-  console.log(clickState);
+
   return (
     <div className="navbar">
       <div className="navbar-button">
         <label
           htmlFor="nav-check"
-          onClick={() => onClick}
+          onClick={onClick}
           className={clickState ? "change" : null}
         >
           <span className="span1" />
@@ -20,13 +20,30 @@ export default function Navbar() {
           <span className="span3" />
         </label>
       </div>
-      <input type="checkbox" id="nav-check" onClick={onClick} />
-      <div className="navbar-links">
+
+      <div className="navbar-links-desktop">
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
+
+      {clickState ? (
+        <div className="navbar-links">
+          <a onClick={onClick} href="#home">
+            Home
+          </a>
+          <a onClick={onClick} href="#skills">
+            Skills
+          </a>
+          <a onClick={onClick} href="#projects">
+            Projects
+          </a>
+          <a onClick={onClick} href="#contact">
+            Contact
+          </a>
+        </div>
+      ) : null}
     </div>
   );
 }

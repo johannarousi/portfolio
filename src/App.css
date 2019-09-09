@@ -30,6 +30,7 @@ a {
   position: fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
   top: 0;
   height: 60px;
   width: 100%;
@@ -45,8 +46,15 @@ a {
   display: inline;
 }
 
+.navbar-links-desktop a {
+  margin: 40px;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-weight: 1000;
+  color: #f4f4f4;
+}
 .navbar > .navbar-links a {
-  display: inline-block;
+  display: none;
   margin: 0 1rem;
   padding: 1rem;
   text-decoration: none;
@@ -55,13 +63,9 @@ a {
   color: #f4f4f4;
 }
 
-.navbar > .navbar-links > a:hover {
+.navbar > .navbar-links-desktop > a:hover {
   color: #dacff5;
   font-size: 18px;
-}
-
-.navbar > #nav-check {
-  display: none;
 }
 
 section {
@@ -150,11 +154,11 @@ section p {
 #home div a:hover {
   color: #ecdaf8;
 }
+
 /* SKILLS */
 .skills-and-education {
   width: 85%;
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
   color: rgb(147, 7, 160);
 }
@@ -189,16 +193,22 @@ section p {
   width: 100%;
 }
 .css-div {
-  width: 80%;
+  width: 85%;
 }
 .javascript-div {
-  width: 70%;
+  width: 85%;
 }
 .react-div {
-  width: 70%;
+  width: 80%;
+}
+.gatsby-div {
+  width: 60%;
+}
+.contentful-div {
+  width: 60%;
 }
 .redux-div {
-  width: 40%;
+  width: 30%;
 }
 .nodejs-div {
   width: 30%;
@@ -432,6 +442,10 @@ footer p {
 }
 
 @media only screen and (max-width: 710px) {
+  .navbar-links-desktop {
+    display: none;
+  }
+
   .social-media-icons {
     position: fixed;
     top: 0;
@@ -483,30 +497,29 @@ footer p {
     display: block;
     width: 100%;
     background: #7f8aaa;
-    height: 0;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
+    text-align: center;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    top: 60px;
     left: 0px;
   }
 
   .navbar > .navbar-links > a {
+    width: 100px;
     color: #fff;
     display: block;
     width: 100%;
   }
+
+  .navbar > .navbar-links > a:hover {
+    color: #dacff5;
+    font-size: 18px;
+  }
+
   .navbar > .navbar-links > a:hover {
     color: #dacff5;
   }
-  .navbar > #nav-check:not(:checked) + .navbar-links {
-    height: 0;
-  }
 
-  .navbar > #nav-check:checked + .navbar-links {
-    text-align: center;
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
   .change .span1 {
     -webkit-transform: rotate(-45deg) translate(-5px, 5px);
     transform: rotate(-45deg) translate(-5px, 5px);
@@ -594,7 +607,15 @@ footer p {
   .img-container {
     margin-top: 10px;
   }
+
+  .navbar > .navbar-links {
+    height: calc(100vh - 50px);
+    top: 50px;
+  }
   .navbar {
     height: 50px;
+  }
+  .home-title {
+    margin-top: 20px;
   }
 }
